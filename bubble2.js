@@ -16,13 +16,13 @@
 var bubbles = [];
 
 function setup() {
-    createCanvas(900, 600);
+    createCanvas(800, 600);
 
     for (var i = 0; i < 10; i++) {
         var bubble = {
             x: random(width),
             y: random(height),
-            radius: random(5,5)
+            radius: random(50, 100)
         };
         bubbles.push(bubble);
     }
@@ -38,9 +38,9 @@ function draw() {
             if (mouseIsPressed) {
                 bubbles.splice(i, 1); // remove this bubble!
             }
-            fill(255, 200, 200, 200);
+            fill(25, 18, 20, 10);
         } else {
-            fill(255, 220, 200, 200);
+            fill(255, 220, 100, 10);
         }
 
         ellipse(bubble.x, bubble.y, bubble.radius*2);
